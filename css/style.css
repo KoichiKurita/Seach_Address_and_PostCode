@@ -1,0 +1,38 @@
+/*
+    Webアプリ実践課題
+    郵便番号検索・住所検索(style.css)
+    作成者：リンクス新越谷 栗田幸一
+    作成日：2023.3.31
+ */
+
+/* 検索フォーム */
+#direction, .note, .required, #error-message {
+    color: red;
+}
+
+.address-input-wrapper, .post-code-input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.address-input, .post-code-input {
+    margin-bottom: 16px;
+}
+
+select, input, label {
+    height: 32px;
+    font-size: 14px;
+}
+
+/* 検索結果表示 */
+form {
+    margin-bottom: 20px;
+}
+
+#result_heading {
+    color: red;
+}
+
+table {
+    margin-bottom: 20px;
+}

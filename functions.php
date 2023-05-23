@@ -15,8 +15,6 @@
      */
     function connect() :pdo
     {
-        // $pdo = new PDO('mysql:host=localhost; dbname=links_prog_exercise; charset=utf8mb4', 'root', '');    // DB接続（ローカル環境）
-        $pdo = new PDO('mysql:host=mysql1.php.xdomain.ne.jp; dbname=xd868156_db; charset=utf8', 'xd868156_1', 'vFnwS7a6PNr2PVhQ');    // DB接続（デプロイ環境）
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);  // SQLをプリコンパイルしてから実行。処理速度向上とSQLインジェクション対策
         return $pdo;

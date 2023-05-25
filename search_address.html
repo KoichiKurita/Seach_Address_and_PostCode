@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<!--
+    Webアプリ実践課題
+    住所検索(search_address.html)
+    作成者：リンクス新越谷 栗田幸一
+    作成日：2023.3.31
+    修正日：2023.5.25
+-->
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>住所検索</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <h1>住所検索</h1>
+        <p id="direction">郵便番号を入力してください。郵便番号検索は<a href="search_postcode.php">こちら</a></p>
+        <p class="note">注：7桁の数字で入力してください。ハイフン（-）は有り・無しどちらでも検索可能です。</p>
+        <form name="search-address" action="result_address.php" method="GET">
+            <div class="post-code-input-wrapper">
+                <div class="post-code-input">
+                    <label for="post-code">郵便番号<span class="required">（必須）</span>：
+                        <input type="text" name="post-code" id="post-code" required>
+                        <!-- 郵便番号の書式で入力させる -->
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" name="operation" value="search" id="button">検索開始</button>
+        </form>
+
+        <!-- 入力された郵便番号の書式が誤っている場合にエラーメッセージを表示する部分 -->
+        <p id="error-message"></p>
+
+        <!-- JavaScript -->
+        <!-- Javascript直下にコメント入れるとページロード完了後に動作しないことがあるので注意する -->
+        <script src="js/search_address_script.js" type="module"></script>
+    </body>
+</html>
